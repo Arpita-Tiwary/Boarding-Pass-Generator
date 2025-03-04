@@ -1,0 +1,167 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%; /* Ensure full height */
+}
+
+body {
+    background: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/boarding/src/main/resources/static/boarding.webp"); /* Replace with correct direct URL */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+}
+
+header {
+    background-color: #020000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: fixed; /* Fix header to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+header nav {
+    background-color: #db1c1c;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1; /* Allow main to grow and fill the space */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 60px; /* Add margin to push content below the fixed header */
+    margin-bottom: 60px; /* Add margin to push content above the fixed footer */
+}
+
+/* Boarding Pass Container */
+.boarding-pass-wrapper {
+    width: 100%;
+    max-width: 600px; /* Max width for the container */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 185px auto; /* Add margin to push the container down */
+}
+
+.boarding-pass-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.fetch-button {
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fetch-button:hover {
+    background-color: #0055aa;
+}
+
+/* Boarding Pass Details */
+.boarding-pass {
+    width: 100%;
+    background-color: #eef2f3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 20px;
+}
+
+.flight-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flight-details div {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .boarding-pass-wrapper {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .boarding-pass {
+        padding: 15px;
+    }
+
+    .fetch-button {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}
+
+footer {
+    position: fixed; /* Fixed position at the bottom */
+    bottom: 0;
+    width: auto; /* Make the footer take up the full width */
+    height: 60px; /* Adjust the height to your needs */
+    background-color: #0e0101; /* Dark red background */
+    text-align: center;
+    padding: 20px;
+    color: #fff; /* Make the text white */
+    z-index: 1000; /* Ensure footer is above other content */
+}

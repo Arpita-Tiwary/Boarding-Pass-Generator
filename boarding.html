@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boarding Pass</title>
+    <link rel="stylesheet" href="boarding-pass.css">
+    <script src="boarding-pass.js" defer></script>
+</head>
+<body>
+    <div class="boarding-pass-wrapper">
+        <header>
+            <h1>Your Boarding Pass</h1>
+            <nav>
+                <ul>
+                    <li><a href="/home_user/home.html">HOME</a></li>
+                    <li><a href="/book_flight/src/main/resources/static/book_flight.html">Book a Flight</a></li>
+                    <li><a href="/Travel Advisory/advisory.html">Prepare & Travel</a></li>
+                    <li><a href="/contact-us/src/main/resources/static/contact-Us.html">Contact</a></li>
+                </ul>
+            </nav>
+            <p> Welcome 🙏🙏</p>
+            <p>Enter your details to fetch your flight information.</p>
+        </header>
+
+        <div id="boarding-pass-container" class="boarding-pass-container">
+            <div class="input-container">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" placeholder="Enter your mobile number" required>
+
+                <button id="fetch-boarding-pass" class="fetch-button">Get Boarding Pass</button>
+            </div>
+
+            <div id="boarding-pass" class="boarding-pass" style="display: none;">
+                <h2 id="passenger-name"></h2>
+                <div class="flight-details">
+                    <div><strong>Flight Number:</strong> <span id="flight-number"></span></div>
+                    <div><strong>Departure:</strong> <span id="departure"></span></div>
+                    <div><strong>Destination:</strong> <span id="destination"></span></div>
+                    <div><strong>Flight Date:</strong> <span id="flight-date"></span></div>
+                    <div><strong>Seat:</strong> <span id="seat"></span></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Airline Reservation System</p>
+        </footer>
+    </div>
+</body>
+</html>
